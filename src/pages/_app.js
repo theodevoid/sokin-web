@@ -7,6 +7,11 @@ const theme = extendTheme({
         fontFamily: "Nunito Sans"
       }
     }
+  },
+  colors: {
+    brand: {
+      900: "#EF3E64"
+    }
   }
 })
 
