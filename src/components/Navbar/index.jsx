@@ -72,6 +72,14 @@ const Navbar = () => {
           <IconButton
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             onClick={onToggle}
+            backgroundColor="brand.900"
+            color="white"
+            _active={{
+              backgroundColor: "#cf3254",
+            }}
+            _hover={{
+              backgroundColor: "#ed5172",
+            }}
           />
         </Flex>
 
@@ -121,7 +129,7 @@ const MobileNavItem = ({ children }) => {
       _hover={{ textDecor: "none" }}
       href="#"
       fontWeight="semibold"
-      paddingY={1}
+      paddingBottom={2}
       _focus={{
         color: "brand.900",
         transition: "border 150ms linear",
