@@ -6,6 +6,11 @@ const theme = extendTheme({
       baseStyle: {
         fontFamily: "Nunito Sans"
       }
+    },
+    Heading: {
+      baseStyle: {
+        fontFamily: "Nunito Sans"
+      }
     }
   },
   colors: {
