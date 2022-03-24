@@ -187,6 +187,7 @@ export default function Home() {
         background="linear-gradient(100.64deg, #EF3E64 0%, #C75E74 100%)"
         mt={{ base: 16, lg: 40 }}
         py={20}
+        px={8}
       >
         <Grid
           templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(2, 1fr)" }}
@@ -202,7 +203,7 @@ export default function Home() {
               alignItems={{ base: "center", lg: "start" }}
               h="100%"
             >
-              <Heading color="white">Download Sokin DiPasar sekarang !</Heading>
+              <Heading color="white">Download Sokin DiPasar sekarang!</Heading>
               <Text color="white" fontSize="lg">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed.
               </Text>
@@ -211,8 +212,8 @@ export default function Home() {
                   <Image
                     src={appstore}
                     layout="fixed"
-                    width="256px"
-                    height="256px"
+                    width="200px"
+                    height="200px"
                     objectFit="contain"
                   />
                 </Box>
@@ -220,8 +221,8 @@ export default function Home() {
                   <Image
                     src={playstore}
                     layout="fixed"
-                    width="256px"
-                    height="256px"
+                    width="200px"
+                    height="200px"
                     objectFit="contain"
                   />
                 </Box>
@@ -229,6 +230,20 @@ export default function Home() {
             </Stack>
           </GridItem>
         </Grid>
+      </Box>
+
+      <Box>
+        <Stack alignItems="center" spacing={10} my={{ base: 16, lg: 40 }}>
+          <Heading fontSize="36px">Partner Sokin</Heading>
+          <Stack>
+            <Text fontWeight="bold" fontSize="90px" lineHeight="1">
+              120.435
+            </Text>
+            <Heading fontSize="24px" color="#5F5F5F">
+              brand bekerjasama dengan Sokin
+            </Heading>
+          </Stack>
+        </Stack>
       </Box>
     </div>
   );
