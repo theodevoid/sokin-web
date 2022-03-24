@@ -7,15 +7,19 @@ import {
   Grid,
   GridItem,
   Heading,
+  Img,
 } from "@chakra-ui/react";
 import Head from "next/head";
 import Image from "next/image";
 import Navbar from "components/Navbar";
-import heroImg from "assets/hero.png";
-import blob1 from "assets/blob-1.png";
-import blob2 from "assets/blob-2.png";
-import placeholderDipasar from "assets/placeholder-dipasar.png";
+import heroImg from "public/hero.png";
+import blob1 from "public/blob-1.png";
+import blob2 from "public/blob-2.png";
+import placeholderDipasar from "public/placeholder-dipasar.png";
 import ShowcaseItem from "components/ShowcaseItem";
+import iphoneMockup from "public/iphone-mockup.png";
+import appstore from "public/appstore.png";
+import playstore from "public/playstore.png";
 
 export default function Home() {
   return (
@@ -121,17 +125,15 @@ export default function Home() {
                 Apa itu DiPasar?
               </Heading>
               <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet,
-                morbi eu eget eu. Cras at arcu, nulla euismod lectus. Diam sit
-                sociis consectetur tempor quam amet massa est, blandit. Molestie
-                netus aenean ut integer elementum egestas et ipsum, est. A
-                auctor ultricies aliquam egestas. Nulla sapien vitae ultricies
-                tristique facilisis lobortis massa egestas. Pulvinar hendrerit
-                gravida lectus lectus. Dui sit mauris turpis ut mi. Nisl, eu
-                velit lorem fringilla est eu sit nunc. Etiam tortor in a aenean.
-                Molestie netus aenean ut integer elementum egestas et ipsum,
-                est. A auctor ultricies aliquam egestas. Nulla sapien vitae
-                ultricies t
+                DiPasar adalah produk digital pertama dari ekosistem DiSokin.
+                Kami manifestasikan hasrat yang kuat untuk bisa membantu usaha
+                setiap rakyat terlepas dari jenis, bentuk, maupun cara berusaha
+                dari setiap para pengusaha dalam produk yang kami sebut DiPasar
+                ini. Adam Smith said, “It is not from the benevolence of the
+                butcher, the brewer, or the baker, that we expect our dinner,
+                but from their regard to their own interest.” Hopefully, we all
+                able to have a virtuous self-interest that can have a great
+                impact beyond oneself.
               </Text>
             </Stack>
           </Stack>
@@ -179,6 +181,55 @@ export default function Home() {
           </GridItem>
         </Grid>
       </Container>
+
+      {/* App store section */}
+      <Box
+        background="linear-gradient(100.64deg, #EF3E64 0%, #C75E74 100%)"
+        mt={{ base: 16, lg: 40 }}
+        py={20}
+      >
+        <Grid
+          templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(2, 1fr)" }}
+        >
+          <GridItem>
+            <Flex h="100%" justifyContent="center" alignItems="center">
+              <Image src={iphoneMockup} />
+            </Flex>
+          </GridItem>
+          <GridItem>
+            <Stack
+              justifyContent="center"
+              alignItems={{ base: "center", lg: "start" }}
+              h="100%"
+            >
+              <Heading color="white">Download Sokin DiPasar sekarang !</Heading>
+              <Text color="white" fontSize="lg">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed.
+              </Text>
+              <Stack direction="row" spacing={8}>
+                <Box _hover={{ cursor: "pointer" }} as="a">
+                  <Image
+                    src={appstore}
+                    layout="fixed"
+                    width="256px"
+                    height="256px"
+                    objectFit="contain"
+                  />
+                </Box>
+                <Box _hover={{ cursor: "pointer" }} as="a">
+                  <Image
+                    src={playstore}
+                    layout="fixed"
+                    width="256px"
+                    height="256px"
+                    objectFit="contain"
+                  />
+                </Box>
+              </Stack>
+            </Stack>
+          </GridItem>
+        </Grid>
+      </Box>
     </div>
   );
 }

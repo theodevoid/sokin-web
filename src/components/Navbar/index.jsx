@@ -8,7 +8,7 @@ import {
   useDisclosure,
   IconButton,
 } from "@chakra-ui/react";
-import sokinLogo from "assets/sokin-logo-nav.png";
+import sokinLogo from "public/sokin-logo-nav.png";
 import Image from "next/image";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
