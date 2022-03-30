@@ -73,9 +73,9 @@ export default function Home() {
           >
             <Stack
               background="rgba(255, 255, 255, 0.8)"
-              paddingX="100px"
+              paddingX={{ lg: "100px", base: "10" }}
               backdropFilter="blur(8px)"
-              boxSize="470px"
+              boxSize={{ lg: "470px", base: "100%" }}
               alignItems="center"
               justifyContent="center"
             >
@@ -84,7 +84,7 @@ export default function Home() {
                   Apa itu DiSokin?
                 </Text>
                 <br />
-                <Text fontSize="18px" lineHeight="28px" color="#252525">
+                <Text color="#252525">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus
                   augue elementum quis habitasse eget maecenas volutpat erat.
                   Sed egestas donec vulputate adipiscing nulla. Nec leo quis
@@ -211,7 +211,7 @@ export default function Home() {
               <Text color="white" fontSize="lg">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed.
               </Text>
-              <Stack direction="row" spacing={8}>
+              <Stack direction={{ base: "column", lg: "row" }} spacing={8}>
                 <Box _hover={{ cursor: "pointer" }} as="a">
                   <Image
                     src={appstore}
@@ -241,10 +241,19 @@ export default function Home() {
         <Stack alignItems="center" spacing={10} my={{ base: 16, lg: 40 }}>
           <Heading fontSize="36px">Partner Sokin</Heading>
           <Stack>
-            <Text fontWeight="bold" fontSize="90px" lineHeight="1">
+            <Text
+              fontWeight="bold"
+              fontSize={{ lg: "90px", base: "72px" }}
+              lineHeight="1"
+              textAlign={{ base: "center", lg: "left" }}
+            >
               120.435
             </Text>
-            <Heading fontSize="24px" color="#5F5F5F">
+            <Heading
+              fontSize="24px"
+              color="#5F5F5F"
+              textAlign={{ base: "center", lg: "left" }}
+            >
               brand bekerjasama dengan Sokin
             </Heading>
           </Stack>
@@ -285,7 +294,10 @@ export default function Home() {
               direction={{ base: "column", lg: "row" }}
               spacing={{ base: "16", md: "8" }}
             >
-              <Stack direction={{ base: "row-reverse", lg: "row" }} spacing="8">
+              <Stack
+                direction={{ base: "column", md: "row-reverse", lg: "row" }}
+                spacing="8"
+              >
                 <Stack spacing="4" minW="36" flex="1">
                   <Text color="#5F5F5F">Kontak kami</Text>
                   <Stack spacing="3" shouldWrapChildren>
