@@ -118,12 +118,17 @@ export default function Home() {
               order={{ base: 2, lg: 1 }}
               mt={{ base: 7, lg: 0 }}
             >
-              <Image src={placeholderDipasar} layout="fixed" />
+              <Image
+                src={placeholderDipasar}
+                objectFit="contain"
+                layout="intrinsic"
+              />
             </Box>
             <Stack
               spacing={3}
               justifyContent="center"
               order={{ base: 1, lg: 2 }}
+              flex={1}
             >
               <Heading fontSize="1.5em" fontFamily="Nunito Sans">
                 Apa itu DiPasar?
