@@ -7,7 +7,10 @@ import {
   Grid,
   GridItem,
   Heading,
-  Img,
+  Button,
+  Input,
+  Divider,
+  ButtonGroup,
 } from "@chakra-ui/react";
 import Head from "next/head";
 import Image from "next/image";
@@ -20,6 +23,7 @@ import ShowcaseItem from "components/ShowcaseItem";
 import iphoneMockup from "public/iphone-mockup.png";
 import appstore from "public/appstore.png";
 import playstore from "public/playstore.png";
+import sokinLogo from "public/sokin-logo-nav.png";
 
 export default function Home() {
   return (
@@ -232,6 +236,7 @@ export default function Home() {
         </Grid>
       </Box>
 
+      {/* Sokin partner section */}
       <Box>
         <Stack alignItems="center" spacing={10} my={{ base: 16, lg: 40 }}>
           <Heading fontSize="36px">Partner Sokin</Heading>
@@ -245,6 +250,96 @@ export default function Home() {
           </Stack>
         </Stack>
       </Box>
+
+      {/* Footer */}
+      <Box py={10} backgroundColor="#F5F5F5">
+        <Container
+          as="footer"
+          role="contentinfo"
+          maxW={{ base: "container.sm", lg: "container.lg" }}
+        >
+          <Stack
+            direction="row"
+            spacing={{ base: "6", md: "8" }}
+            align="start"
+            alignItems="center"
+          >
+            <Image src={sokinLogo} />
+            <Text fontSize="30px" fontWeight="bold">
+              DiSokin
+            </Text>
+          </Stack>
+          <Stack
+            spacing="8"
+            direction={{ base: "column", lg: "row" }}
+            justify="space-between"
+            py={{ base: "6", md: "8" }}
+          >
+            <Stack spacing="3">
+              <Text>PT.Pemberdaya Usaha Alam Semesta</Text>
+              <Text>
+                Jalan ipsum dolor sit amet, consectet adipiscing elit.{" "}
+              </Text>
+            </Stack>
+            <Stack
+              direction={{ base: "column", lg: "row" }}
+              spacing={{ base: "16", md: "8" }}
+            >
+              <Stack direction={{ base: "row-reverse", lg: "row" }} spacing="8">
+                <Stack spacing="4" minW="36" flex="1">
+                  <Text color="#5F5F5F">Kontak kami</Text>
+                  <Stack spacing="3" shouldWrapChildren>
+                    <Text>+62 81234567890</Text>
+                    <Text>sokin.ngab@gmail.com</Text>
+                  </Stack>
+                </Stack>
+                <Stack spacing="4" minW="36" flex="1">
+                  <Text color="#5F5F5F">Sosial Media</Text>
+                  <Stack spacing="3" shouldWrapChildren>
+                    <Text>Instagram: @soki.ngab</Text>
+                    <Text>Twitter: @soki.ngab</Text>
+                    <Text>Pornhub: @soki.ngab</Text>
+                  </Stack>
+                </Stack>
+              </Stack>
+            </Stack>
+            <Stack spacing={"-130px"}>
+              <Box _hover={{ cursor: "pointer" }} as="a" mt={"-65px"}>
+                <Image
+                  src={appstore}
+                  layout="fixed"
+                  width="200px"
+                  height="200px"
+                  objectFit="contain"
+                />
+              </Box>
+              <Box _hover={{ cursor: "pointer" }} as="a">
+                <Image
+                  src={playstore}
+                  layout="fixed"
+                  width="200px"
+                  height="200px"
+                  objectFit="contain"
+                />
+              </Box>
+            </Stack>
+          </Stack>
+          <Divider />
+          <Stack
+            pt="8"
+            pb="12"
+            justify="space-between"
+            direction={{ base: "column-reverse", md: "row" }}
+            align="center"
+          >
+            <Text fontSize="sm" color="subtle">
+              &copy; {new Date().getFullYear()} DiSokin, Inc. All rights
+              reserved.
+            </Text>
+          </Stack>
+        </Container>
+      </Box>
     </div>
   );
 }
+
